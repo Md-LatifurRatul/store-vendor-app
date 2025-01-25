@@ -1,3 +1,4 @@
+import 'package:ecom_store_vendor_only/vendor/views/auth/vendor_registration_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider;
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
@@ -23,12 +24,7 @@ class _VendorAuthScreenState extends State<VendorAuthScreen> {
             ],
           );
         }
-        return ElevatedButton(
-          onPressed: () async {
-            await FirebaseAuth.instance.signOut();
-          },
-          child: Text('Sign Out'),
-        );
+        return VendorRegistrationScreen();
       },
     );
   }
